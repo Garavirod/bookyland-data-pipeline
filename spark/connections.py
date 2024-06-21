@@ -36,7 +36,7 @@ def consume_from_kafka(spark_conn, server, topic):
             .option('startingOffsets', 'earliest') \
             .load()
     except Exception as e:
-        logging.warning(f"kafka dataframe could not be created because: {e}")
+        logging.warning(f"kafka data frame could not be created because: {e}")
     return df
 
 

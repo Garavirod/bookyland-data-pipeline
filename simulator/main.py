@@ -9,7 +9,7 @@ def run_simulator(seconds_to_run:int):
     users = load_data_from_file(file_name='users')
     end_time = time.time() + seconds_to_run
     kafka_producer = get_kafka_producer_config()
-
+    
     while True:
         user = random.choice(users)
         purchase = create_book_purchases(user)
